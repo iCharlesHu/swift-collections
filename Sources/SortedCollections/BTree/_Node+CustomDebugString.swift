@@ -9,9 +9,11 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if !Embedded
 extension _Node: CustomDebugStringConvertible {
   /// A textual representation of this instance, suitable for debugging.
   public var debugDescription: String {
     self.read { $0.debugDescription }
   }
 }
+#endif

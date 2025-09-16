@@ -9,6 +9,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if !$Embedded
 extension _HashTable.Bucket: CustomStringConvertible {
   // A textual representation of this instance.
   public var description: String { "Bucket(@\(offset))"}
@@ -62,3 +63,4 @@ extension _UnsafeHashTable.BucketIterator: CustomStringConvertible {
     return "BucketIterator(scale: \(_scale), bucket: \(offset), value: \(value), bits: \(remainingBits) (\(_remainingBitCount) bits))"
   }
 }
+#endif // !$Embedded

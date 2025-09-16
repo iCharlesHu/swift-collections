@@ -11,6 +11,7 @@
 
 // These are primarily for debugging.
 
+#if !$Embedded
 extension _HashTable.Header: CustomStringConvertible {
   @usableFromInline
   internal var _description: String {
@@ -59,3 +60,4 @@ extension _HashTable.Storage: CustomStringConvertible {
   }
 }
 
+#endif // !$Embedded

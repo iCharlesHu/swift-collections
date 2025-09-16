@@ -70,6 +70,7 @@ extension OrderedSet._UnstableInternals {
     return ObjectIdentifier(storage)
   }
 
+  #if !$Embedded
   @_spi(Testing)
   public var hashTableContents: [Int?] {
     guard let table = base._table else { return [] }
@@ -77,6 +78,7 @@ extension OrderedSet._UnstableInternals {
       hashTable.debugContents()
     }
   }
+  #endif // !$Embedded
 
   @_spi(Testing)
   @_alwaysEmitIntoClient
